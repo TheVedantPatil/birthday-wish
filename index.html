@@ -4,232 +4,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Wish </title>
   <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
 
-  <title>Birthday Wish</title>
+<body>
 
-  <!-- Floating decorations -->
+  <!-- Floating decorations & Confetti -->
   <div class="floating" id="floating"></div>
-
-  <!-- Confetti -->
   <div id="confetti"></div>
 
-
   <main class="scene container">
-    <!-- =========================
-         SCREEN 1
-    ========================== -->
 
+    <!-- Screen 1: Intro -->
     <section class="screen active" id="screen1">
-      <!-- <div class="heart">♥</div> -->
-
-      <!-- <div class="eyebrow">
-        Important announcement
-      </div> -->
-
-      <h1>
-        Namrataaa...
-      </h1>
-
-      <p class="muted">
-        I have something very important to tell you.
-      </p>
-
-      <!-- <p class="joke">
-        No, you cannot say "Jaa naa" yet.
-      </p> -->
-
-      <button id="openButton">
-        Open it
-      </button>
-
+      <h1>Namrataaa...</h1>
+      <p class="muted">I have something very important to tell you.</p>
+      <button id="openButton">Open it</button>
     </section>
 
-
-    <!-- =========================
-         SCREEN 2 — CAKE
-    ========================== -->
-
+    <!-- Screen 2: Cake -->
     <section class="screen" id="screen2">
-
-      <!-- <div class="eyebrow">
-        Breaking news
-      </div> -->
-
-      <h2>
-        IT'S YOUR BIRTHDAY!
-      </h2>
-
-
-
-      <!-- <p>
-        And yes, unfortunately for you,
-        you're getting a whole website.
-      </p> -->
-
+      <h2>IT'S YOUR BIRTHDAY!</h2>
 
       <div class="cake-area">
-
         <div class="cake">
-
-          <!-- Candles -->
-
           <div class="candles">
-
             <div class="candle">
               <div class="flame"></div>
             </div>
-
             <div class="candle">
               <div class="flame"></div>
             </div>
-
             <div class="candle">
               <div class="flame"></div>
             </div>
-
           </div>
-
-
-          <!-- Top cake -->
 
           <div class="tier top">
             <div class="cream"></div>
-
             <div class="drip d1"></div>
             <div class="drip d2"></div>
             <div class="drip d3"></div>
           </div>
 
-
-          <!-- Cake layers -->
           <div class="tier"></div>
           <div class="tier"></div>
         </div>
       </div>
 
-      <button id="cakeNext">
-        Blow Candles!
-      </button>
-
+      <button id="cakeNext">Blow Candles!</button>
     </section>
 
-
-    <!-- =========================
-         SCREEN 3 — CHOCOLATES
-    ========================== -->
-
+    <!-- Screen 3: Chocolates -->
     <section class="screen" id="screen3">
-      <!-- <div class="eyebrow">
-        Emergency birthday supplies
-      </div> -->
-
-      <h2>
-        CHOCOLATES.
-      </h2>
-
+      <h2>CHOCOLATES.</h2>
 
       <div class="chocolates">
-
         <div class="choc"></div>
         <div class="choc"></div>
         <div class="choc"></div>
         <div class="choc"></div>
         <div class="choc"></div>
         <div class="choc"></div>
-
       </div>
 
-      <p class="joke">
-        Because obviously cake isn't enough.
-      </p>
+      <p class="joke">Because obviously cake isn't enough.</p>
+      <p>Lots of chocolates to the sweetest person</p>
 
-      <p>
-        Lots of chocolates to the sweetest person
-      </p>
-
-
-      <button id="next3">
-        One more thing...
-      </button>
-
+      <button id="next3">One more thing...</button>
     </section>
 
-    <!-- =========================
-         SCREEN 4 — MESSAGE
-    ========================== -->
-
+    <!-- Screen 4: Message -->
     <section class="screen" id="screen4">
-
-      <h2>
-        Happy Birthday, Namrata ♥
-      </h2>
+      <h2>Happy Birthday, Namrata ♥</h2>
 
       <div class="letter">
+        <p>Happy Birthday to one of the most special person in my life.</p>
         <p>
-          Happy Birthday to one of the most special person in my life.
+          I hope this year gives you everything you've been wishing for —
+          happiness, success, amazing memories, lots of food, lots of chocolate,
+          and absolutely no unnecessary stress.
         </p>
-
         <p>
-          I hope this year gives you everything you've been wishing for — happiness, success, amazing memories, lots of
-          food, lots of chocolate, and absolutely no unnecessary stress.
-        </p>
-
-        <p>
-          Stay exactly the way you are.
-          A little crazy, a little annoying,
+          Stay exactly the way you are. A little crazy, a little annoying,
           very funny, and genuinely amazing.
         </p>
-
         <p>
-          And remember:
-          <b>you're never getting rid of me that easily.</b>
+          And remember: <b>you're never getting rid of me that easily.</b>
         </p>
-
-        <div class="signature">
-          Happy Birthday !!!
-        </div>
-
+        <div class="signature">Happy Birthday !!!</div>
       </div>
 
-      <button id="wishButton">
-        Make a Wish
-      </button>
-
+      <button id="wishButton">Make a Wish</button>
     </section>
 
-
-    <!-- =========================
-         SCREEN 6 — FINAL
-    ========================== -->
-
+    <!-- Screen 5: Final Wish -->
     <section class="screen" id="screen6">
+      <h1>Make a wish.</h1>
+      <div class="quote">"May your life be sweet, and you get everything you want."</div>
+      <p>Close your eyes &amp; make a wish.</p>
+      <p class="muted">And may this be the beginning of your best year yet.</p>
 
-      <h1>
-        Make a wish.
-      </h1>
-
-
-      <div class="quote">
-        "May your life be sweet, and you get everything you want."
-      </div>
-
-
-      <p>
-        Close your eyes & make a wish.
-      </p>
-
-      <p class="muted">
-        And may this be the beginning
-        of your best year yet.
-      </p>
-
+      <!-- New Button added here -->
+      <button id="restartButton"> See it again ?</button>
     </section>
 
   </main>
 
-  <script src="./script.js" defer></script>
-
-  </body>
+</body>
 
 </html>

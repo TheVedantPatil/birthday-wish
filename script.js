@@ -9,12 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
     s6: document.getElementById('screen6')
   };
 
+  // 1. Add the restart button to your buttons object
   const buttons = {
     openBtn: document.getElementById('openButton'),
     cakeNext: document.getElementById('cakeNext'),
     next3: document.getElementById('next3'),
-    wishBtn: document.getElementById('wishButton')
+    wishBtn: document.getElementById('wishButton'),
+    restartBtn: document.getElementById('restartButton') // <-- Added this line
   };
+
+  // ... (Your other button listeners) ...
+
+  // 2. Add the listener for the restart button
+  buttons.restartBtn.addEventListener('click', () => {
+    // Relight the candles so they are ready if she plays it again
+    const flames = document.querySelectorAll('.flame');
+    flames.forEach(flame => {
+      flame.classList.remove('off');
+    });
+
+    // Send her back to the first screen
+    switchScreen(screens.s6, screens.s1);
+  });
 
   function switchScreen(hideScreen, showScreen) {
     hideScreen.classList.remove('active');
