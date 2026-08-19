@@ -12,7 +12,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(135deg, #ffe0e9, #fbe2f0);
   color: #4a4a4a;
-  overflow: hidden; /* Prevents scrollbars during animations */
+  /*overflow: hidden; Prevents scrollbars during animations */
   height: 100vh;
   width: 100vw;
 }
