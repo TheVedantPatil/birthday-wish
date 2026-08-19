@@ -163,6 +163,10 @@ button:active {
   animation: pulse 1.5s infinite;
 }
 
+.msg{ 
+  margin-top: -10px;
+}
+
 /* --- Chocolates --- */
 .chocolates {
   display: grid;
