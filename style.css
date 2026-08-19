@@ -1,0 +1,247 @@
+/* Import cute fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap');
+
+/* --- Global Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffe0e9, #fbe2f0);
+  color: #4a4a4a;
+  overflow: hidden; /* Prevents scrollbars during animations */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* --- Container & Screens --- */
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.screen {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  max-width: 450px; /* Mobile friendly max-width */
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.screen.active {
+  display: flex; /* Only show active screen */
+}
+
+/* --- Typography --- */
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff477e;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+h2 { font-size: 2rem; }
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.muted {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.joke {
+  font-style: italic;
+  font-weight: 600;
+  color: #ff748c;
+}
+
+/* --- Buttons --- */
+button {
+  background: #ff477e;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 71, 126, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(255, 71, 126, 0.3);
+}
+
+/* --- Cake CSS Art --- */
+.cake-area {
+  margin: 40px 0;
+}
+
+.cake {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tier {
+  background: #ffb6c1; /* Pink cake */
+  border: 2px solid #ff91a4;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cake Layers Sizes */
+.tier:nth-child(2) { width: 120px; height: 50px; z-index: 3; background: #fff0f5; }
+.tier:nth-child(3) { width: 160px; height: 60px; margin-top: -10px; }
+.tier:nth-child(4) { width: 200px; height: 70px; margin-top: -10px; background: #ff91a4;}
+
+/* Candles */
+.candles {
+  display: flex;
+  gap: 15px;
+  margin-bottom: -5px;
+  z-index: 4;
+}
+
+.candle {
+  width: 14px;
+  height: 45px;
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 4px,
+    #ff477e 4px,
+    #ff477e 8px
+  );
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer; /* Tells user it's tappable */
+}
+
+/* Flames */
+.flame {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 20px;
+  background: #ffa502;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Teardrop shape */
+  animation: flicker 0.4s infinite alternate;
+  transition: opacity 0.3s;
+}
+
+.flame.off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hint {
+  font-weight: bold;
+  color: #ff477e;
+  animation: pulse 1.5s infinite;
+}
+
+/* --- Chocolates --- */
+.chocolates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.choc {
+  width: 60px;
+  height: 60px;
+  background: #592e1f; /* Chocolate brown */
+  border-radius: 12px;
+  position: relative;
+  box-shadow: inset -5px -5px 15px rgba(0,0,0,0.4), inset 5px 5px 15px rgba(255,255,255,0.1);
+  animation: floatUp 2s infinite alternate ease-in-out;
+}
+
+/* Add slight delay to make them float organically */
+.choc:nth-child(2) { animation-delay: 0.2s; background: #8B4513; }
+.choc:nth-child(3) { animation-delay: 0.4s; }
+.choc:nth-child(4) { animation-delay: 0.1s; background: #8B4513; }
+.choc:nth-child(5) { animation-delay: 0.5s; }
+.choc:nth-child(6) { animation-delay: 0.3s; background: #8B4513; }
+
+/* --- Letter Styling --- */
+.letter {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: left;
+  border-top: 10px solid #ff477e;
+  margin-bottom: 20px;
+}
+
+.signature {
+  text-align: right;
+  font-family: 'Pacifico', cursive;
+  color: #ff477e;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* --- Confetti & Animations --- */
+#confetti {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px; height: 20px;
+  background: red;
+  animation: fall linear forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.9; box-shadow: 0 0 10px #ff7f50; }
+  100% { transform: translateX(-50%) scale(1.1); opacity: 1; box-shadow: 0 0 20px #ffa502; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-10px); }
+}
+
+@keyframes fall {
+  to { transform: translateY(105vh) rotate(720deg); }
+}
