@@ -199,12 +199,35 @@ button:active {
   margin-bottom: 20px;
 }
 
+button {
+  background: #ff477e;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 71, 126, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+  
+  /* Add these two lines to fix the mobile tap issue */
+  -webkit-tap-highlight-color: transparent; 
+  user-select: none; 
+}
+
 .signature {
   text-align: right;
   font-family: 'Pacifico', cursive;
   color: #ff477e;
   font-size: 1.4rem;
   margin-top: 20px;
+}
+
+#wishButton { 
+  margin-top: -10px;
 }
 
 /* --- Confetti & Animations --- */

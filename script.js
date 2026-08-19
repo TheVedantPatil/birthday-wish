@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     restartBtn: document.getElementById('restartButton') // <-- Added this line
   };
 
-  // ... (Your other button listeners) ...
-
   // 2. Add the listener for the restart button
   buttons.restartBtn.addEventListener('click', () => {
     // Relight the candles so they are ready if she plays it again
